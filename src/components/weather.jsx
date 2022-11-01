@@ -144,7 +144,7 @@ function Weather() {
     let changing = document.getElementById("changing");
     let inputVal = document.getElementById("input-box").value;
 
-    getPlaces(inputVal)
+    getPlaces(inputVal, process.env.REACT_APP_FIRST_KEY)
       .then((res) => {
         setData(res.data.features);
         change.style.display = "none";
